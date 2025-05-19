@@ -9,6 +9,8 @@ class HomeScreen extends StatelessWidget {
     Colors.amber,
   ];
 
+  HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(

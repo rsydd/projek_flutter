@@ -7,10 +7,15 @@ class CourseScreen extends StatelessWidget {
     'Collection #3',
   ];
 
+  CourseScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final itemWidth = screenWidth * 0.4; // Lebih kecil dari sebelumnya
+
     return ListView.builder(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       itemCount: collections.length,
       itemBuilder: (context, index) {
         return Column(
@@ -18,9 +23,9 @@ class CourseScreen extends StatelessWidget {
           children: [
             Text(
               collections[index],
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             SizedBox(
               height: 250,
               child: ListView.builder(
@@ -28,8 +33,8 @@ class CourseScreen extends StatelessWidget {
                 itemCount: 4,
                 itemBuilder:
                     (_, i) => Container(
-                      margin: EdgeInsets.only(right: 10),
-                      width: 200,
+                      margin: const EdgeInsets.only(right: 10),
+                      width: itemWidth,
                       decoration: BoxDecoration(
                         color: Colors.grey[700],
                         borderRadius: BorderRadius.circular(16),
@@ -37,7 +42,7 @@ class CourseScreen extends StatelessWidget {
                     ),
               ),
             ),
-            SizedBox(height: 50),
+            const SizedBox(height: 50),
           ],
         );
       },
