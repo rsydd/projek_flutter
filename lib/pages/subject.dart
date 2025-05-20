@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SubjectScreen extends StatelessWidget {
   const SubjectScreen({super.key});
@@ -10,23 +11,42 @@ class SubjectScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
+          Text(
             "Subject",
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
-          const Text(
-            "Informatika",
-            style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+            style: GoogleFonts.montserrat(
+              fontSize: 20,
+              fontWeight: FontWeight.w800,
+            ),
           ),
           const SizedBox(height: 20),
-          const Text("Rangkuman Materi", style: TextStyle(fontSize: 16)),
+          Text(
+            "Informatika",
+            style: GoogleFonts.montserrat(
+              fontSize: 25,
+              fontWeight: FontWeight.w800,
+            ),
+          ),
+          const SizedBox(height: 15),
+          Text(
+            "Rangkuman Materi",
+            style: GoogleFonts.montserrat(
+              fontSize: 20,
+              fontWeight: FontWeight.w200,
+            ),
+          ),
           const SizedBox(height: 10),
           _buildYellowCards(4),
-          const SizedBox(height: 20),
-          const Text("Referensi Video", style: TextStyle(fontSize: 16)),
+          const SizedBox(height: 15),
+          Text(
+            "Referensi Video",
+            style: GoogleFonts.montserrat(
+              fontSize: 20,
+              fontWeight: FontWeight.w200,
+            ),
+          ),
           const SizedBox(height: 10),
           Container(
-            height: 100,
+            height: 150,
             decoration: BoxDecoration(
               color: Colors.deepOrangeAccent,
               borderRadius: BorderRadius.circular(16),

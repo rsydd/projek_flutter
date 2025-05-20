@@ -46,6 +46,26 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           SizedBox(height: 50),
+          LayoutBuilder(
+            builder: (context, constraints) {
+              double imageHeight =
+                  constraints.maxWidth * 0.5; // Adjust scale as needed
+              return Container(
+                width: double.infinity,
+                height: imageHeight,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Image.network(
+                  'https://i.imgur.com/b24Xjh3.png',
+                  fit: BoxFit.cover,
+                  width: double.infinity,
+                  height: imageHeight,
+                ),
+              );
+            },
+          ),
+          SizedBox(height: 10),
           Text(
             "Subject",
             style: GoogleFonts.montserrat(
@@ -73,7 +93,10 @@ class HomeScreen extends StatelessWidget {
           SizedBox(height: 30),
           Text(
             "My Course",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            style: GoogleFonts.montserrat(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
           ),
           SizedBox(height: 16),
           GridView.count(

@@ -44,7 +44,7 @@ class _MainNavigationState extends State<MainNavigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBody: true, // Agar konten bisa terlihat di bawah navigation bar
+      extendBody: true,
       body: Stack(
         children: [
           _pages[_selectedIndex],
